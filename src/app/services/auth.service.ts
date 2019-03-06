@@ -9,8 +9,11 @@ export class AuthService {
   constructor(private AFauth: AngularFireAuth) { }
 
   login(email: string, password: string) {
-    this.AFauth.auth.signInWithEmailAndPassword(email, password).then(res => {
-      console.log(res);
-    }).catch(err => console.log(err));
+
+    return new Promise(((resolve, reject) => {
+      this.AFauth.auth.signInWithEmailAndPassword(email, password).then(user => {
+        resolve(user);
+      }).catch(err => reject(err));
+    }));
   }
 }
