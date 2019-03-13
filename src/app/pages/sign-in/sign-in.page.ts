@@ -19,7 +19,7 @@ export class SignInPage implements OnInit {
 
   onSubmitLogin() {
     this.authService.login(this.email, this.password).then( res => {
-      this.router.navigate(['/inicio/tab1']);
+      this.router.navigate(['']);
     }).catch(err => alert('Los datos son incorrectos'));
   }
 
