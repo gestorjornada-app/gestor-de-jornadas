@@ -5,7 +5,8 @@ import {NoAuthGuard} from './guards/no-auth.guard';
 
 const routes: Routes = [
   { path: '', loadChildren: './tabs/tabs.module#TabsPageModule', canActivate: [AuthGuard] },
-  { path: 'sign-in', loadChildren: './pages/sign-in/sign-in.module#SignInModule', canActivate: [NoAuthGuard] }
+  { path: 'sign-in', loadChildren: './pages/sign-in/sign-in.module#SignInModule', canActivate: [NoAuthGuard] },  { path: 'sign-up', loadChildren: './pages/sign-up/sign-up.module#SignUpPageModule' }
+
 ];
 @NgModule({
   imports: [
