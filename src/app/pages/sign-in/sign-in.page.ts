@@ -17,10 +17,14 @@ export class SignInPage implements OnInit {
   ngOnInit() {
   }
 
-  onSubmitLogin() {
-    this.authService.login(this.email, this.password).then( res => {
+  onSubmitSignIn() {
+    this.authService.signIn(this.email, this.password).then( res => {
       this.router.navigate(['']);
     }).catch(err => alert('Los datos son incorrectos'));
+  }
+
+  navigateToSignUp() {
+    this.router.navigate(['sign-up']);
   }
 
 }

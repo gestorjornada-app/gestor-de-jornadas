@@ -1,0 +1,60 @@
+<ion-content padding>
+  <img class="logo" src="assets/icon/logo.png" alt="">
+  <ion-card color="light">
+
+    <ion-card-header>
+      <br>
+
+      <ion-card-title text-center="true">Registrate</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item color="light">
+        <ion-label position="floating">Nombre(s)</ion-label>
+        <ion-input type="text" name="firstName" [(ngModel)]="firstName"></ion-input>
+      </ion-item>
+      <ion-item color="light">
+        <ion-label position="floating">Apellido(s)</ion-label>
+        <ion-input type="text" name="lastName" [(ngModel)]="lastName"></ion-input>
+      </ion-item>
+      <ion-item color="light">
+        <ion-label position="floating">Institución</ion-label>
+        <ion-input type="text" name="institution" [(ngModel)]="institution"></ion-input>
+      </ion-item>
+      <ion-item color="light">
+        <ion-label position="floating">Profesión</ion-label>
+        <ion-input type="text" name="institution" [(ngModel)]="profession"></ion-input>
+      </ion-item>
+      <ion-item color="light">
+        <ion-label position="floating">Número de teléfono</ion-label>
+        <ion-input type="number" name="phoneNumber" [(ngModel)]="phoneNumber"></ion-input>
+      </ion-item>
+      <ion-item color="light">
+        <ion-label position="floating">Dirección</ion-label>
+        <ion-input type="text" name="address" [(ngModel)]="address"></ion-input>
+      </ion-item>
+      <ion-item color="light">
+        <ion-label position="floating">Correo electrónico</ion-label>
+        <ion-input type="text" name="email" [(ngModel)]="email"></ion-input>
+      </ion-item>
+      <ion-item color="light">
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" name="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+      <ion-item color="light">
+        <ion-label position="floating">Contraseña nuevamente</ion-label>
+        <ion-input type="password" name="confirmationPassword" [(ngModel)]="confirmationPassword"></ion-input>
+      </ion-item>
+      <br>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+            <ion-button (click)="onSubmitSignUp()" color="secondary" expand="block">
+              Registrarme
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

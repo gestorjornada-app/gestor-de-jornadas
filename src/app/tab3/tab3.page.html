@@ -1,9 +1,68 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Three
+      Perfil
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-subtitle text-center="true">{{profession}}</ion-card-subtitle>
+      <ion-card-title text-center="true">{{firstName}}</ion-card-title>
+      <ion-card-title text-center="true">{{lastName}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list-header>
+    Información
+  </ion-list-header>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="call" slot="start"></ion-icon>
+      <ion-label>
+        {{phoneNumber}}
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="home" slot="start"></ion-icon>
+      <ion-label>
+        {{address}}
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="mail" slot="start"></ion-icon>
+      <ion-label>
+        {{email}}
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="business" slot="start"></ion-icon>
+      <ion-label>
+        {{institution}}
+      </ion-label>
+    </ion-item>
+
+    <ion-item href="#">
+      <ion-label>
+        Jornadas en las que he participado.
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-button expand="block" color="tertiary">
+    Cambiar contraseña
+  </ion-button>
+
+  <ion-button (click)="onSubmitSignOut()" expand="block" color="secondary">
+    Cerrar sesión
+  </ion-button>
+</ion-content>

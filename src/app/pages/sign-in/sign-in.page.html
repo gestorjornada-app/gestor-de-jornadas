@@ -20,8 +20,15 @@
       <ion-grid>
         <ion-row>
           <ion-col [offset]="6" size="6">
-            <ion-button (click)="onSubmitLogin()" color="tertiary" expand="block">
+            <ion-button (click)="onSubmitSignIn()" color="tertiary" expand="block">
               Entrar
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <ion-button (click)="navigateToSignUp()" color="secondary" expand="block">
+              Registrarme
             </ion-button>
           </ion-col>
         </ion-row>
