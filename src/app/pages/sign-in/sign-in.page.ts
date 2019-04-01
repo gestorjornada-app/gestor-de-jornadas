@@ -23,4 +23,8 @@ export class SignInPage implements OnInit {
     }).catch(err => alert('Los datos son incorrectos'));
   }
 
+  navigateToSignUp() {
+    this.router.navigate(['sign-up']);
+  }
+
 }

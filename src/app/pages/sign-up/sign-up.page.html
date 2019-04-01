@@ -9,28 +9,40 @@
     </ion-card-header>
     <ion-card-content>
       <ion-item color="light">
-        <ion-label position="floating">Nombre completo</ion-label>
-        <ion-input type="text" name="fullName" [(ngModel)]="registerCredentials.fullName"></ion-input>
+        <ion-label position="floating">Nombre(s)</ion-label>
+        <ion-input type="text" name="firstName" [(ngModel)]="firstName"></ion-input>
+      </ion-item>
+      <ion-item color="light">
+        <ion-label position="floating">Apellido(s)</ion-label>
+        <ion-input type="text" name="lastName" [(ngModel)]="lastName"></ion-input>
+      </ion-item>
+      <ion-item color="light">
+        <ion-label position="floating">Institución</ion-label>
+        <ion-input type="text" name="institution" [(ngModel)]="institution"></ion-input>
+      </ion-item>
+      <ion-item color="light">
+        <ion-label position="floating">Profesión</ion-label>
+        <ion-input type="text" name="institution" [(ngModel)]="profession"></ion-input>
       </ion-item>
       <ion-item color="light">
         <ion-label position="floating">Número de teléfono</ion-label>
-        <ion-input type="number" name="phoneNumber" [(ngModel)]="registerCredentials.phoneNumber"></ion-input>
+        <ion-input type="number" name="phoneNumber" [(ngModel)]="phoneNumber"></ion-input>
       </ion-item>
       <ion-item color="light">
         <ion-label position="floating">Dirección</ion-label>
-        <ion-input type="text" name="address" [(ngModel)]="registerCredentials.address"></ion-input>
+        <ion-input type="text" name="address" [(ngModel)]="address"></ion-input>
       </ion-item>
       <ion-item color="light">
         <ion-label position="floating">Correo electrónico</ion-label>
-        <ion-input type="text" name="email" [(ngModel)]="registerCredentials.email"></ion-input>
+        <ion-input type="text" name="email" [(ngModel)]="email"></ion-input>
       </ion-item>
       <ion-item color="light">
         <ion-label position="floating">Contraseña</ion-label>
-        <ion-input type="password" name="password" [(ngModel)]="registerCredentials.password"></ion-input>
+        <ion-input type="password" name="password" [(ngModel)]="password"></ion-input>
       </ion-item>
       <ion-item color="light">
-        <ion-label position="floating">Ingresa tu contraseña de nuevo</ion-label>
-        <ion-input type="password" name="confirmationPassword" [(ngModel)]="registerCredentials.confirmationPassword"></ion-input>
+        <ion-label position="floating">Contraseña nuevamente</ion-label>
+        <ion-input type="password" name="confirmationPassword" [(ngModel)]="confirmationPassword"></ion-input>
       </ion-item>
       <br>
       <ion-grid>

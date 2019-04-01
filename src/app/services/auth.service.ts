@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth} from '@angular/fire/auth';
+import {Router} from '@angular/router';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private AFauth: AngularFireAuth) { }
+  constructor(private AFauth: AngularFireAuth, private router: Router) { }
 
   signIn(email: string, password: string) {
     return new Promise(((resolve, reject) => {
@@ -17,12 +19,19 @@ export class AuthService {
 
   }
 
-  signUp(credentials) {
-    return this.AFauth.auth.createUserWithEmailAndPassword( credentials.email, credentials.password).then( result => {
+  signUp(email, password) {
+    return this.AFauth.auth.createUserWithEmailAndPassword( email, password).then( result => {
       window.alert('Registro exitoso');
       console.log(result.user.uid);
     }).catch( error => {
       window.alert(error.message);
     });
   }
+
+  signOut() {
+    this.AFauth.auth.signOut().then( () => {
+      this.router.navigate(['/sign-in']);
+    });
+  }
+
 }
