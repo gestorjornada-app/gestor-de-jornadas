@@ -7,7 +7,19 @@
 </ion-header>
 
 <ion-content>
-    <ion-card class="welcome-card">
+
+      <ion-card *ngFor="let medicalDays of medicalDays">
+        <ion-card-header>
+            <ion-card-title>{{medicalDays.name}}</ion-card-title>
+          <ion-card-subtitle>{{medicalDays.startDate}} - {{medicalDays.endDate}}</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+          {{medicalDays.description}}
+        </ion-card-content>
+      </ion-card>
+
+    <ion-card class="welcome-card" *ngIf="medicalDaysCount === 0">
       <ion-img src="/assets/background.jpg"></ion-img>
       <ion-card-header>
         <ion-card-subtitle>Comencemos</ion-card-subtitle>
@@ -20,7 +32,6 @@
         <p>Puedes iniciar creando jornadas con el botón "+" en la parte inferior, o solicitando que te inviten como voluntario de una jornada en curso</p>
       </ion-card-content>
     </ion-card>
-
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button>
       <ion-icon name="add" (click)="openModal()"></ion-icon>

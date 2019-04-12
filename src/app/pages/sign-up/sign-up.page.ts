@@ -21,26 +21,28 @@ export class SignUpPage implements OnInit {
   institution: any;
   lastName: any;
   profession: any;
+  currentDate = new Date();
+  dateTime = this.currentDate.getDate() + '/'
+      + (this.currentDate.getMonth() + 1)  + '/'
+      + this.currentDate.getFullYear() + ' '
+      + this.currentDate.getHours() + ':'
+      + this.currentDate.getMinutes() + ':'
+      + this.currentDate.getSeconds();
 
-
-  constructor(private authService: AuthService, private router: Router,
-              private userService: UserService, private angularFireAuth: AngularFireAuth) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
   }
 
   onSubmitSignUp() {
-    this.authService.signUp(this.email, this.password).then( res => {
+    const user: User = {phoneNumber: this.phoneNumber, address: this.address, email: this.email,
+      firstName: this.firstName, institution: this.institution, lastName: this.lastName, profession: this.profession,
+      createdAt: this.dateTime
+    };
+    this.authService.signUp(this.email, this.password, user).then(res => {
       this.router.navigate(['']);
     }).catch(err => {
       window.alert(err.message);
-    }).then(res => {
-      const user: User = {email: this.email, firstName: this.firstName, lastName: this.lastName,
-        phoneNumber: this.phoneNumber, address: this.address, profession: this.profession,
-        institution: this.institution};
-      this.userService.createUser(user, this.angularFireAuth.auth.currentUser.uid);
-      console.log(this.angularFireAuth.auth.currentUser.uid);
-      console.log(user);
     });
   }
 
