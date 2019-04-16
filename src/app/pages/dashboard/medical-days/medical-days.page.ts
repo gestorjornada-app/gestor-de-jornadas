@@ -40,4 +40,8 @@ export class MedicalDaysPage implements OnInit {
 
     return await modal.present();
   }
+
+    openMedicalDetails(medicalDays) {
+        console.log(medicalDays);
+    }
 }
