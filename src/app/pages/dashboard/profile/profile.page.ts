@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {AuthService} from '../services/auth.service';
-import { UserService } from '../services/user.service';
+import {AuthService} from '../../../services/auth.service';
+import { UserService } from '../../../services/user.service';
 
 interface UserData {
     profession: any;
@@ -15,11 +15,11 @@ interface UserData {
 }
 
 @Component({
-  selector: 'app-tab3',
-  templateUrl: 'tab3.page.html',
-  styleUrls: ['tab3.page.scss']
+  selector: 'app-profile',
+  templateUrl: 'profile.page.html',
+  styleUrls: ['profile.page.scss']
 })
-export class Tab3Page implements OnInit {
+export class ProfilePage implements OnInit {
 
     profession: any;
     firstName: any;

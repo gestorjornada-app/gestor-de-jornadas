@@ -1,15 +1,15 @@
 import {Component, OnInit} from '@angular/core';
-import {CreateNewMedicalDayComponent} from '../components/medical-days/create-new-medical-day/create-new-medical-day.component';
+import {CreateNewMedicalDayComponent} from '../../../components/medical-days/create-new-medical-day/create-new-medical-day.component';
 import {ModalController} from '@ionic/angular';
-import {UserService} from '../services/user.service';
-import {MedicalDayService} from '../services/medical-day.service';
+import {UserService} from '../../../services/user.service';
+import {MedicalDayService} from '../../../services/medical-day.service';
 
 @Component({
-  selector: 'app-tab1',
-  templateUrl: 'tab1.page.html',
-  styleUrls: ['tab1.page.scss']
+  selector: 'app-medical-days',
+  templateUrl: 'medical-days.page.html',
+  styleUrls: ['medical-days.page.scss']
 })
-export class Tab1Page implements OnInit {
+export class MedicalDaysPage implements OnInit {
 
   public medicalDays: any;
   public medicalDaysCount: number;

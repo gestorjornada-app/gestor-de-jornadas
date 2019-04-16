@@ -15,7 +15,18 @@ export class UserService {
   getUserId() {return this.angularFireAuth.auth.currentUser.uid; }
 
   createUser(user: User, userId: string) {
-    this.angularFirestoreDB.collection('users').doc(userId).set({user : user});
+    this.angularFirestoreDB
+        .collection('users')
+        .doc(userId)
+        .set({
+          firstName: user.firstName,
+          lastName: user.lastName,
+          email: user.email,
+          phoneNumber: user.phoneNumber,
+          address: user.address,
+          profession: user.profession,
+          institution: user.institution
+        });
   }
 
 }

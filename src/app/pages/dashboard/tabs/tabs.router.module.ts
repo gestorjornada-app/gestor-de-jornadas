@@ -4,15 +4,15 @@ import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
   {
-    path: 'inicio',
+    path: 'dashboard',
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'medical-days',
         children: [
           {
             path: '',
-            loadChildren: '../tab1/tab1.module#Tab1PageModule'
+            loadChildren: '../medical-days/medical-days.module#MedicalDaysPageModule'
           }
         ]
       },
@@ -26,24 +26,24 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tab3',
+        path: 'profile',
         children: [
           {
             path: '',
-            loadChildren: '../tab3/tab3.module#Tab3PageModule'
+            loadChildren: '../profile/profile.module#ProfilePageModule'
           }
         ]
       },
       {
         path: '',
-        redirectTo: '/inicio/tab1',
+        redirectTo: '/dashboard/medical-days',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/inicio/tab1',
+    redirectTo: '/dashboard/medical-days',
     pathMatch: 'full'
   }
 ];
