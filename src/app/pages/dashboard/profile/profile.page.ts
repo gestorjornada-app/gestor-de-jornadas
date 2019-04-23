@@ -35,14 +35,14 @@ export class ProfilePage implements OnInit {
     ngOnInit() {
         this.userService.getUser(this.userService.getUserId()).subscribe( user => {
             const data: UserData = user as UserData;
-            this.profession = data.user.profession;
-            this.firstName = data.user.firstName;
-            this.lastName = data.user.lastName;
-            this.biography = data.user.biography;
-            this.phoneNumber = data.user.phoneNumber;
-            this.address = data.user.address;
-            this.email = data.user.email;
-            this.institution = data.user.institution;
+            this.profession = data.profession;
+            this.firstName = data.firstName;
+            this.lastName = data.lastName;
+            this.biography = data.biography;
+            this.phoneNumber = data.phoneNumber;
+            this.address = data.address;
+            this.email = data.email;
+            this.institution = data.institution;
         });
     }
     onSubmitSignOut() {
