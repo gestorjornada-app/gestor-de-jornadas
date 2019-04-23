@@ -13,11 +13,12 @@ import { AngularFireModule} from '@angular/fire';
 import { AngularFirestoreModule, FirestoreSettingsToken } from '@angular/fire/firestore';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {CreateNewMedicalDayComponent} from './components/medical-days/create-new-medical-day/create-new-medical-day.component';
+import {MedicalDayDetailsComponent} from './components/medical-days/medical-day-details/medical-day-details.component';
 import {FormsModule} from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, CreateNewMedicalDayComponent],
-  entryComponents: [CreateNewMedicalDayComponent],
+  declarations: [AppComponent, CreateNewMedicalDayComponent, MedicalDayDetailsComponent],
+  entryComponents: [CreateNewMedicalDayComponent, MedicalDayDetailsComponent],
   imports: [FormsModule, BrowserModule, AngularFirestoreModule, IonicModule.forRoot(),
     AppRoutingModule, AngularFireModule.initializeApp(firebaseConfig), AngularFireAuthModule],
   providers: [

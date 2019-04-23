@@ -22,12 +22,12 @@ export class AuthService {
   }
 
   signUp(email, password, user) {
-    return this.AFauth.auth.createUserWithEmailAndPassword( email, password).then( result => {
-      window.alert('Registro exitoso');
-      this.userService.createUser(user, result.user.uid);
-    }).catch( error => {
-      window.alert(error.message);
-    });
+    return new Promise(((resolve, reject) => {
+      this.AFauth.auth.createUserWithEmailAndPassword(email, password).then(result => {
+        this.userService.createUser(user, result.user.uid);
+        resolve(result);
+      }).catch(err => reject(err));
+    }));
   }
 
   signOut() {

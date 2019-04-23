@@ -28,8 +28,7 @@ export class CreateNewMedicalDayComponent implements OnInit {
   }
 
   closeModal() {
-    const onClosedData = 'Wrapped Up!';
-    this.modalController.dismiss(onClosedData);
+    this.modalController.dismiss();
   }
 
   createMedicalDay() {

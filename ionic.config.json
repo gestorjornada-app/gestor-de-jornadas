@@ -1,6 +1,8 @@
 {
   "name": "organizador-de-jornadas",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "8df1fcb6"
 }
